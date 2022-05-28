@@ -40,6 +40,8 @@ class ServicesController extends GetxController {
   }
 
   void addService() {
+    name.clear();
+    price.clear();
     final GlobalKey<FormState> formKey = GlobalKey<FormState>();
     Get.defaultDialog(
         title: 'Add Service',

@@ -174,7 +174,8 @@ class RoomsController extends GetxController {
                         "number": int.tryParse(number.text),
                         "price": int.tryParse(price.text),
                         "image": image_url,
-                        "description": description.text
+                        "description": description.text,
+                        "check": false
                       };
                       await collectionReference
                           .doc()
@@ -183,6 +184,7 @@ class RoomsController extends GetxController {
                         type.clear();
                         number.clear();
                         price.clear();
+                        description.clear();
                         Get.back();
                         image.clear();
                         showbar('title', 'subtitle', 'Room Added', true);

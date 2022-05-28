@@ -35,9 +35,16 @@ class CustomerPage extends StatelessWidget {
                                             color: Colors.white)),
                                     backgroundColor: Colors.amber.shade700,
                                   ),
-                                  subtitle: Text(
-                                      'Number: ${logic.users[index].number}'
-                                      'email: ${logic.users[index].email}'),
+                                  subtitle: Column(
+                                    children: [
+                                      Text(
+                                          'Number: ${logic.users[index].number}'),
+                                      Padding(
+                                        padding: const EdgeInsets.only(top:8.0),
+                                        child: Text('email: ${logic.users[index].email}'),
+                                      )
+                                    ],
+                                  ),
                                   trailing: Row(
                                     mainAxisSize: MainAxisSize.min,
                                     children: [

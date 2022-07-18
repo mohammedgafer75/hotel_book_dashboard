@@ -48,10 +48,7 @@ class CustomersController extends GetxController {
             onPressed: () async {
               try {
                 showdilog();
-                FirebaseFirestore.instance
-                    .collection('customers')
-                    .doc(id)
-                    .delete();
+                FirebaseFirestore.instance.collection('users').doc(id).delete();
                 Get.back();
                 Get.back();
                 showbar('Delete Customer', '', 'Customer Deleted', true);
